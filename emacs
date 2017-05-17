@@ -15,6 +15,7 @@
  '(custom-safe-themes
    (quote
     ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default)))
+ '(desktop-save-mode t)
  '(evil-flash-delay 30)
  '(ido-enable-flex-matching t)
  '(jdee-global-classpath (quote ("." "/usr/local/algs4/algs4.jar")))
@@ -92,3 +93,4 @@
 (ido-mode t)
 ;;resize main frame on startup
 (setq default-frame-alist '( (height . 65) (width . 150) ))
+(server-start)
