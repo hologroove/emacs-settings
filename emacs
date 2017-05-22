@@ -93,4 +93,6 @@
 (ido-mode t)
 ;;resize main frame on startup
 (setq default-frame-alist '( (height . 65) (width . 150) ))
+;;show the full path of file in title bar
+(setq frame-title-format "%b - %f")
 (server-start)
