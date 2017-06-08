@@ -20,12 +20,12 @@
  '(ido-enable-flex-matching t)
  '(jdee-global-classpath (quote ("." "/usr/local/algs4/algs4.jar")))
  '(jdee-server-dir "/usr/local/lib/jdee-bundle/")
- '(package-selected-packages (quote (erlang jdee solarized-theme evil))))
- ;;'(evil-symbol-word-search t)
+ '(package-selected-packages (quote (erlang jdee solarized-theme evil)))
  '(inhibit-startup-screen t)
  '(show-trailing-whitespace t)
  '(org-startup-indented t)
  '(org-startup-truncated nil)
+)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -86,7 +86,9 @@
 (column-number-mode)
 ;;show lines longer than 80
 (require 'whitespace)
+(setq whitespace-line-column 100)
 (setq whitespace-style '(face lines-tail trailing))
+(setq whitespace-global-modes '(erlang-mode))
 (global-whitespace-mode t)
 ;;buffer switching
 (require 'ido)
