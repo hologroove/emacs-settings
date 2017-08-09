@@ -17,21 +17,22 @@
     ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default)))
  '(desktop-save-mode t)
  '(evil-flash-delay 30)
+ '(hi-lock-auto-select-face t)
  '(ido-enable-flex-matching t)
+ '(inhibit-startup-screen t)
  '(jdee-global-classpath (quote ("." "/usr/local/algs4/algs4.jar")))
  '(jdee-server-dir "/usr/local/lib/jdee-bundle/")
- '(package-selected-packages (quote (erlang jdee solarized-theme evil)))
- '(inhibit-startup-screen t)
- '(show-trailing-whitespace t)
  '(org-startup-indented t)
  '(org-startup-truncated nil)
-)
+ '(package-selected-packages (quote (erlang jdee solarized-theme evil)))
+ '(show-trailing-whitespace t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(smerge-base ((t (:background "#888833" :foreground "black"))))
+ '(smerge-refined-added ((t (:inherit smerge-refined-change :background "dark green")))))
 
 ;; ************ evil ************
 (setq evil-want-C-i-jump nil)
@@ -58,7 +59,7 @@
 (setq solarized-use-variable-pitch nil
       solarized-scale-org-headlines nil)
 ;;solarized color theme
-(add-hook 'after-init-hook (lambda () (load-theme 'solarized-light)))
+(add-hook 'after-init-hook (lambda () (load-theme 'solarized-dark)))
 
 
 ;;************ highlight words ************
@@ -66,6 +67,7 @@
                (lambda ()
                 (font-lock-add-keywords nil
                  '(("\\<\\(FIXME\\|TODO\\|BUG\\|elsziva\\|ELSZIVA\\)" 1 font-lock-warning-face t)))))
+(setq erlang-root-dir "/usr/local/lib/erlang")
 
 ;;hide toolbar
 (tool-bar-mode 0)
