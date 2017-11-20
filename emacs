@@ -1,7 +1,7 @@
 (require 'package)
-;(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
-(add-to-list 'package-archives
-             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+;(add-to-list 'package-archives
+;             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (when (< emacs-major-version 24)
   ;; For important compatibility libraries like cl-lib
   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
@@ -22,9 +22,16 @@
  '(inhibit-startup-screen t)
  '(jdee-global-classpath (quote ("." "/usr/local/algs4/algs4.jar")))
  '(jdee-server-dir "/usr/local/lib/jdee-bundle/")
+ '(org-link-frame-setup
+   (quote
+    ((vm . vm-visit-folder-other-frame)
+     (vm-imap . vm-visit-imap-folder-other-frame)
+     (gnus . org-gnus-no-new-news)
+     (file . find-file)
+     (wl . wl-other-frame))))
  '(org-startup-indented t)
  '(org-startup-truncated nil)
- '(package-selected-packages (quote (erlang jdee solarized-theme evil)))
+ '(package-selected-packages (quote (w3m erlang jdee solarized-theme evil)))
  '(show-trailing-whitespace t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -53,6 +60,7 @@
 (setq org-blank-before-new-entry (quote (((plain-list-item . auto)))))
 ;customizing the org workflow tags:
 (setq org-todo-keywords '((sequence "TODO" "WORK" "|" "DONE")))
+(global-set-key "\C-cl" 'org-store-link)
 
 ;;************ solarized ************
 ;;prevents solarized to change font size
