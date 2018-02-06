@@ -62,12 +62,16 @@
 (setq org-todo-keywords '((sequence "TODO" "WORK" "|" "DONE")))
 (global-set-key "\C-cl" 'org-store-link)
 
+;; ************ common.log *************
+(autoload 'commonlog-mode "commonlog" "Some documentation." t)
+(add-to-list 'auto-mode-alist '("common\\.log\\.[0-9]\\'" . commonlog-mode))
+
 ;;************ solarized ************
 ;;prevents solarized to change font size
 (setq solarized-use-variable-pitch nil
       solarized-scale-org-headlines nil)
 ;;solarized color theme
-(add-hook 'after-init-hook (lambda () (load-theme 'solarized-dark)))
+(add-hook 'after-init-hook (lambda () (load-theme 'solarized-light)))
 
 
 ;;************ highlight words ************
