@@ -7,6 +7,8 @@
   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 (package-initialize)
 
+(add-to-list 'load-path "~/Documents/emacs-settings/")
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -63,7 +65,7 @@
 (global-set-key "\C-cl" 'org-store-link)
 
 ;; ************ common.log *************
-(autoload 'commonlog-mode "commonlog" "Some documentation." t)
+(autoload 'commonlog-mode "commonlog-mode.el" "Some documentation." t)
 (add-to-list 'auto-mode-alist '("common\\.log\\.[0-9]\\'" . commonlog-mode))
 
 ;;************ solarized ************
