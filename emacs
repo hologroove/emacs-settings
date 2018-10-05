@@ -16,13 +16,14 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default)))
+    ("a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default)))
  '(desktop-save-mode t)
  '(evil-flash-delay 30)
  '(hi-lock-auto-select-face t)
  '(ido-enable-flex-matching t)
  '(inhibit-startup-screen t)
  '(jdee-global-classpath (quote ("." "/usr/local/algs4/algs4.jar")))
+ '(jdee-maven-disabled-p t)
  '(jdee-server-dir "/usr/local/lib/jdee-bundle/")
  '(org-link-frame-setup
    (quote
@@ -42,6 +43,11 @@
  ;; If there is more than one, they won't work right.
  '(smerge-base ((t (:background "#888833" :foreground "black"))))
  '(smerge-refined-added ((t (:inherit smerge-refined-change :background "dark green")))))
+
+;; ************ package ************
+;; TODO: write a function to run these. After installing in a new place this should be run to fetch all packages
+;;(package-refresh-contents)
+;;(package-install-selected-packages)
 
 ;; ************ evil ************
 (setq evil-want-C-i-jump nil)
