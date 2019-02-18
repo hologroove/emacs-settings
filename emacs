@@ -43,6 +43,7 @@
  ;; If there is more than one, they won't work right.
  '(smerge-base ((t (:background "#888833" :foreground "black"))))
  '(smerge-refined-added ((t (:inherit smerge-refined-change :background "dark green")))))
+(setq smerge-command-prefix "\C-cv")
 
 ;; ************ package ************
 ;; TODO: write a function to run these. After installing in a new place this should be run to fetch all packages
